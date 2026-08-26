@@ -1,5 +1,7 @@
  📍 ETA Tracker — Full Stack Project
 
+ APP LINK: https://eta-tracker-seven.vercel.app/
+
 **Chain:** HTML → CSS → JavaScript → Supabase → ETA Algorithm → Vercel API → Groq AI → AI Explanation
 
 ---
