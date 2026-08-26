@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ETA Tracker — AI Powered</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+    <header class="app__header">
+      <h1>📍 Live ETA Tracker</h1>
+      <p class="app__subtitle">Supabase + ETA Algorithm + Groq AI</p>
+    </header>
+
+    <main class="app__main">
+
+      <!-- Trip input form -->
+      <section class="card">
+        <h2>Start a Trip</h2>
+        <form id="trip-form">
+          <label for="origin">Origin</label>
+          <input type="text" id="origin" placeholder="e.g. Andheri, Mumbai" required />
+
+          <label for="destination">Destination</label>
+          <input type="text" id="destination" placeholder="e.g. Bandra, Mumbai" required />
+
+          <label for="distance">Distance (km)</label>
+          <input type="number" id="distance" step="0.1" placeholder="e.g. 8.5" required />
+
+          <label for="speed">Average Speed (km/h)</label>
+          <input type="number" id="speed" step="1" placeholder="e.g. 28" required />
+
+          <label for="traffic">Traffic Condition</label>
+          <select id="traffic">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+
+          <button type="submit" id="submit-btn">Calculate ETA</button>
+        </form>
+      </section>
+
+      <!-- Result -->
+      <section class="card result" id="result-card" hidden>
+        <h2>Result</h2>
+        <div class="result__eta">
+          <span class="result__label">Estimated Arrival Time</span>
+          <span class="result__value" id="eta-output">--:--</span>
+        </div>
+        <div class="result__minutes" id="eta-minutes"></div>
+
+        <div class="result__ai">
+          <h3>🤖 AI Explanation (Groq)</h3>
+          <p id="ai-explanation">Waiting for calculation…</p>
+        </div>
+      </section>
+
+      <!-- Trip history from Supabase -->
+      <section class="card">
+        <h2>Trip History</h2>
+        <button id="refresh-history">Refresh</button>
+        <ul id="history-list" class="history-list">
+          <li class="history-list__empty">No trips yet.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="app__footer">
+      <p>HTML → CSS → JS → Supabase → ETA Algorithm → Vercel API → Groq AI → Explanation</p>
+    </footer>
+  </div>
+
+  <!-- Supabase client (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- App config (Supabase URL/key) -->
+  <script src="config.js"></script>
+
+  <!-- App logic -->
+  <script src="eta.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>

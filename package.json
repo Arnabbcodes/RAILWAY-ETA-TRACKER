@@ -1,0 +1,13 @@
+{
+  "name": "eta-tracker",
+  "version": "1.0.0",
+  "description": "Live ETA Tracker: HTML/CSS/JS frontend + Supabase + ETA algorithm + Vercel API + Groq AI explanations",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
