@@ -1,5 +1,4 @@
-Vercel API -> Groq AI -> Display
-// ============================================================
+
 
 const form = document.getElementById("trip-form");
 const submitBtn = document.getElementById("submit-btn");
