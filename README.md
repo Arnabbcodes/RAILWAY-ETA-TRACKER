@@ -175,3 +175,5 @@ Open `api/explain.js` and edit:
 | 404 on `/api/explain` | Make sure you're running via `vercel dev`, not a plain static server — plain HTTP servers don't run `api/` functions |
 | CORS errors | Shouldn't happen since frontend and API are same-origin on Vercel; if testing frontend elsewhere, adjust accordingly |
 | Groq model error | Model names change over time — check https://console.groq.com/docs/models and update `api/explain.js` |
+
+If you are using any other version of GROQ other than llama, the vercel.json file is not required.
