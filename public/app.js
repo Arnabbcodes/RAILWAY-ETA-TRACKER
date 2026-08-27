@@ -1,6 +1,4 @@
-// ============================================================
-// APP.JS — wires the full chain together:
-// Form Input -> ETA Algorithm -> Supabase (save) -> Vercel API -> Groq AI -> Display
+Vercel API -> Groq AI -> Display
 // ============================================================
 
 const form = document.getElementById("trip-form");
