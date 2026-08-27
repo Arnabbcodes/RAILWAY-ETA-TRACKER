@@ -1,9 +1,4 @@
-// ============================================================
-// /api/explain.js
-// Vercel Serverless Function (Node.js runtime)
-// Receives trip + ETA data from the frontend, sends it to Groq AI,
-// and returns a natural-language explanation of the ETA.
-// ============================================================
+
 
 export default async function handler(req, res) {
   // Only allow POST
